@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Premium Jewelry</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">💎 Premium Jewelry</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart 🛒</a></li>
+            <li><a href="wishlist.html">Wishlist ❤️</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="products">
+    <h2>All Products</h2>
+
+    <!-- SEARCH -->
+    <input type="text" id="search" placeholder="Search products..." onkeyup="searchProduct()">
+
+    <!-- FILTER -->
+    <select onchange="filterPrice(this.value)">
+        <option value="all">All Products</option>
+        <option value="100">Under $100</option>
+        <option value="200">Under $200</option>
+    </select>
+
+    <div class="product-container">
+
+        <div class="product-card">
+            <img src="./images/ring.jpg" alt="Ring">
+            <h3>Diamond Ring</h3>
+            <p>$120</p>
+            <a href="product.html?name=Diamond Ring&price=120">View Details</a>
+            <button onclick="addToCart('Diamond Ring', 120)">Add to Cart</button>
+            <button onclick="addToWishlist('Diamond Ring', 120)">Wishlist ❤️</button>
+        </div>
+
+        <div class="product-card">
+            <img src="./images/necklace.jpg" alt="Necklace">
+            <h3>Gold Necklace</h3>
+            <p>$250</p>
+            <a href="product.html?name=Gold Necklace&price=250">View Details</a>
+            <button onclick="addToCart('Gold Necklace', 250)">Add to Cart</button>
+            <button onclick="addToWishlist('Gold Necklace', 250)">Wishlist ❤️</button>
+        </div>
+
+        <div class="product-card">
+            <img src="./images/bracelet.jpg" alt="Bracelet">
+            <h3>Silver Bracelet</h3>
+            <p>$90</p>
+            <a href="product.html?name=Silver Bracelet&price=90">View Details</a>
+            <button onclick="addToCart('Silver Bracelet', 90)">Add to Cart</button>
+            <button onclick="addToWishlist('Silver Bracelet', 90)">Wishlist ❤️</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- JS -->
+<script src="./main.js"></script>
+<script src="./search.js"></script>
